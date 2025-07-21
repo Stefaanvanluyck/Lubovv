@@ -1,0 +1,139 @@
+/* Google Fonts import */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans&display=swap');
+
+body {
+    font-family: 'Open Sans', Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #fafafa;
+    color: #333;
+}
+
+header {
+  background-color: #f4e4dc;
+  padding: 2rem 2rem 4rem 2rem;
+  text-align: left;
+  box-shadow: 0 2px 6px rgba(201, 107, 107, 0.2);
+}
+
+header h1, header p, nav {
+  text-align: left;
+  margin-left: 0;
+}
+
+header h1 {
+    margin: 0;
+    font-size: clamp(5rem, 10vw, 12rem);
+    font-family: 'Montserrat', sans-serif;
+    color: #c96b6b;
+    letter-spacing: 0.1em;
+    transition: color 0.3s ease;
+}
+
+header h1:hover {
+    color: #a85555;
+    cursor: pointer;
+    text-shadow: 0 0 8px rgba(201, 107, 107, 0.7);
+}
+
+.intro, .contact {
+    padding: 2rem;
+    max-width: 700px;
+    margin: 2rem auto;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgb(201 107 107 / 0.15);
+    transition: box-shadow 0.3s ease;
+}
+
+.intro:hover, .contact:hover {
+    box-shadow: 0 8px 16px rgb(201 107 107 / 0.3);
+}
+
+form label {
+    display: block;
+    margin-top: 1.5rem;
+    font-weight: 600;
+    color: #555;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 0.75rem;
+    margin-top: 0.5rem;
+    border: 1.5px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+form input:focus, form textarea:focus {
+    outline: none;
+    border-color: #c96b6b;
+    box-shadow: 0 0 8px rgba(201, 107, 107, 0.5);
+}
+
+button {
+    margin-top: 1.5rem;
+    padding: 0.9rem 2.5rem;
+    background: linear-gradient(45deg, #c96b6b, #a85555);
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 1.1rem;
+    box-shadow: 0 4px 12px rgba(201, 107, 107, 0.4);
+    transition: background 0.4s ease, box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background: linear-gradient(45deg, #a85555, #c96b6b);
+    box-shadow: 0 6px 18px rgba(201, 107, 107, 0.7);
+    transform: scale(1.05);
+}
+
+footer {
+    text-align: center;
+    padding: 1.5rem 1rem;
+    background-color: #f4e4dc;
+    margin-top: 3rem;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 16px;
+  padding: 1rem 2rem;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+              box-shadow 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.1) rotate(1deg);
+  box-shadow: 0 10px 20px rgba(201, 107, 107, 0.35);
+}
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 6rem;
+    }
+
+    .intro, .contact {
+        margin: 1rem;
+        padding: 1.5rem;
+    }
+}

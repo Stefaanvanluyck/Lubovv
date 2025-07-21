@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LUBOVV | Interieuradvies</title>
+    <style>
+        html {
+          scroll-behavior: smooth;
+        }
+        body {
+          margin: 0;
+          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        header {
+          background-image: url('https://source.unsplash.com/1600x600/?interior,design');
+          background-size: cover;
+          background-position: center;
+          color: white;
+          text-align: center;
+          padding: 6rem 2rem 4rem;
+          position: relative;
+        }
+        header::after {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: rgba(0, 0, 0, 0.4);
+          z-index: 0;
+        }
+        header h1, header p, nav {
+          position: relative;
+          z-index: 1;
+        }
+        nav ul {
+          list-style: none;
+          display: flex;
+          justify-content: center;
+          gap: 2rem;
+          padding: 0;
+          margin: 1rem 0 0;
+        }
+        nav ul li a {
+          text-decoration: none;
+          color: white;
+          font-weight: bold;
+          font-size: 1.1rem;
+        }
+        nav ul li a:hover,
+        nav ul li a.active {
+          border-bottom: 2px solid white;
+        }
+        section {
+          padding: 4rem 2rem;
+          max-width: 1000px;
+          margin: auto;
+          animation: fadeIn 1s ease-in;
+        }
+        .about {
+          display: flex;
+          flex-wrap: wrap;
+          align-items: center;
+          gap: 2rem;
+        }
+        .about img {
+          width: 300px;
+          border-radius: 1rem;
+        }
+        .gallery-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+          gap: 1rem;
+          margin-top: 1rem;
+        }
+        .gallery-grid img {
+          width: 100%;
+          border-radius: 10px;
+          transition: transform 0.3s ease;
+        }
+        .gallery-grid img:hover {
+          transform: scale(1.05);
+        }
+        .contact form {
+          display: flex;
+          flex-direction: column;
+          gap: 1rem;
+        }
+        form input, form textarea {
+          padding: 0.8rem;
+          font-size: 1rem;
+          border-radius: 5px;
+          border: 1px solid #ccc;
+        }
+        button {
+          padding: 0.7rem 2rem;
+          background-color: #c96b6b;
+          color: white;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+          transition: transform 0.3s ease;
+        }
+        button:hover {
+          transform: scale(1.05);
+        }
+        footer {
+          text-align: center;
+          padding: 2rem;
+          background-color: #f4e4dc;
+        }
+        @keyframes fadeIn {
+          from { opacity: 0; transform: translateY(20px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+        .insta-icon {
+          position: absolute;
+          top: 1.5rem;
+          right: 1.5rem;
+          z-index: 2;
+
+        .insta-icon img {
+          width: 50px;
+          height: 50px;
+          filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%) contrast(103%);
+          transition: transform 0.3s;
+        }
+        .insta-icon img:hover {
+          transform: scale(1.3);
+        }
+    </style>
+    <!-- Lightbox2 CSS -->
+    <link rel="stylesheet" href="css/lightbox.min.css">
+</head>
+<body>
+<header>
+    <div class="insta-icon">
+        <a href="https://www.instagram.com/lubovvinteriors" target="_blank">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/instagram.svg" alt="Instagram" />
+        </a>
+    </div>
+    <a href="/" style="text-decoration: none; color: inherit;">
+        <h1>LUBOVV</h1>
+    </a>
+
+    <p>Interieuradvies voor woningen door Steffi Lebeuf</p>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">Over Steffi</a></li>
+            <li><a href="#gallery">Inspiratie</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section id="home">
+    <h2>Welkom bij LUBOVV</h2>
+    <p>Wij helpen je jouw droominterieur te realiseren. Van kleuradvies tot volledige inrichting – wij staan klaar om jouw visie tot leven te brengen.</p>
+</section>
+
+<section id="about" class="about">
+    <img src="https://source.unsplash.com/400x400/?portrait,creative" alt="Steffi Lebeuf">
+    <div>
+        <h2>Over Steffi</h2>
+        <p>Steffi Lebeuf is de oprichter van LUBOVV en heeft jarenlange ervaring in interieurontwerp, styling en ruimtelijke beleving. Haar passie ligt in het combineren van esthetiek en functionaliteit, en ze gelooft dat een goed ontworpen woning rust en inspiratie biedt.</p>
+        <p>Met opleidingen in binnenhuisarchitectuur en ervaring bij toonaangevende designbureaus, vertaalt Steffi jouw wensen naar een harmonieus en luxueus interieur.</p>
+    </div>
+</section>
+
+<section id="gallery">
+    <h2>Inspiratie</h2>
+    <div class="gallery-grid">
+        <a href="images/interieur1.png" data-lightbox="gallery" data-title="Chique interieur 1">
+            <img src="images/interieur1.png" alt="Chique interieur 1">
+        </a>
+        <a href="images/interieur2.png" data-lightbox="gallery" data-title="Chique interieur 2">
+            <img src="images/interieur2.png" alt="Chique interieur 2">
+        </a>
+        <a href="images/interieur3.png" data-lightbox="gallery" data-title="Chique interieur 3">
+            <img src="images/interieur3.png" alt="Chique interieur 3">
+        </a>
+        <a href="images/interieur4.png" data-lightbox="gallery" data-title="Chique interieur 4">
+            <img src="images/interieur4.png" alt="Chique interieur 4">
+        </a>
+    </div>
+</section>
+<section id="contact" class="contact">
+    <h2>Contacteer ons</h2>
+    <form id="contactForm">
+        <input type="text" name="from_name" placeholder="Jouw naam" required />
+        <input type="email" name="from_email" placeholder="E-mailadres" required />
+        <textarea name="message" placeholder="Je bericht..." required></textarea>
+        <button type="submit">Verzenden</button>
+    </form>
+
+    <p id="status"></p>
+</section>
+
+<footer>
+    <p>Volg ons op <a href="https://www.instagram.com/lubovv" target="_blank">Instagram</a></p>
+    <p>&copy; 2025 LUBOVV - Steffi Lebeuf</p>
+</footer>
+
+<!-- EmailJS SDK + script -->
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script>
+    (function() {
+      emailjs.init("ryf0HAbDqTzY368PW"); // 🔁
+    })();
+
+    document.getElementById("contactForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      const status = document.getElementById("status");
+      status.textContent = "Verzenden...";
+
+      emailjs.sendForm("service_9u8ex4o", "template_m20bheg", this)
+        .then(() => {
+          status.textContent = "Bedankt voor je bericht!";
+          this.reset();
+        }, (err) => {
+          console.error(err);
+          status.textContent = "Er ging iets mis. Probeer opnieuw.";
+        });
+    });
+</script>
+<!-- Lightbox2 JS -->
+<script src="js/lightbox.min.js"></script>
+</body>
+</html>
